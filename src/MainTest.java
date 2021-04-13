@@ -12,13 +12,13 @@ public class MainTest {
     private int day;
     private int month;
     private int year;
-    private String expectedS;
+    private String expected;
 
-    public MainTest(int day, int month, int year, String expectedS) {
+    public MainTest(int day, int month, int year, String expected) {
         this.day = day;
         this.month = month;
         this.year = year;
-        this.expectedS = expectedS;
+        this.expected = expected;
     }
     @Parameterized.Parameters
     public static Collection<Object[]> getAllCollection() {
@@ -40,7 +40,7 @@ public class MainTest {
 //        String a = Main.nextDayCaculator(29,2,2020);
 //        assertEquals("1/3/2020",a);
         // this is meejt moi
-        assertEquals(this.expectedS,Main.nextDayCaculator(this.day,this.month,this.year));
+        assertEquals(this.expected,Main.nextDayCaculator(this.day,this.month,this.year));
 
     }
 
