@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
@@ -34,6 +35,7 @@ public class MainTest {
     }
 
     @Test
+    @DisplayName("case test")
     public void checkAllCaculator(){
 //        Assert.assertEquals(this.expectedS,Main.nextDayCaculator(this.day, this.month, this.year));
 //        assertEquals(this.expectedS,Main.nextDayCaculator(this.day,this.month,this.year));

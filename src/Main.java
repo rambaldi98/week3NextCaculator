@@ -1,25 +1,29 @@
 public class Main {
 
-    public static final int firstDayOfMonth = 1;
+    public static final int FIRSTOFMONTH = 1;
+    public static final String CHARACTERMATCH = "/";
+    public static final int LASTOFYEAR = 12;
+    public static final int FIRSTOFYEAR = 1;
 
     public static String nextDayCaculator(int day, int month, int year){
         int nextDay = day;
         int nextMonth = month;
         int nextYear = year;
         if(day == getDayOfMonth(month,year)){
-            if(month == 12){
-                nextDay = firstDayOfMonth;
-                nextMonth = 1;
+            if(month == LASTOFYEAR){
+                nextDay = FIRSTOFMONTH;
+                nextMonth = FIRSTOFYEAR;
                 nextYear++;
             } else {
-                nextDay = firstDayOfMonth;
+                nextDay = FIRSTOFMONTH;
                 nextMonth++;
             }
         } else {
             nextDay++;
         }
 
-        return  (nextDay + "/" + nextMonth +"/" + nextYear);
+
+        return  (nextDay + CHARACTERMATCH + nextMonth + CHARACTERMATCH + nextYear);
     }
 
     //
